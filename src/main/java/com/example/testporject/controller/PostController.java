@@ -15,7 +15,7 @@ public class PostController {
 
     @PostMapping(value="/default")
     public String postMethod(){
-        return "Hello World";
+        return "Hellor World";
     }
 
     @PostMapping(value = "/member")
