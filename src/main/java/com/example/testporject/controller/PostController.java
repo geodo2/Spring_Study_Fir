@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/test/post")
+@RequestMapping("/api/v1/post-api")
 public class PostController {
 
     @PostMapping(value="/default")

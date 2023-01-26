@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/api/v1/get-api")
 
 // http://localhost:8080/api/v1/get-api
 
