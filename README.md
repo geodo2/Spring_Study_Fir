@@ -1,1 +1,1 @@
-# Spring_boot_test_and_study_project
+# Spring_boot_test_study_project
