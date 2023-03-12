@@ -24,8 +24,8 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @GetMapping(value = "/product/{productId}")
-    public ProductDTO getProduct(@PathVariable String productId) {
+    @GetMapping(value = "/products/{productId}")
+    public String getProduct(@PathVariable String productId) {
         long startTime = System.currentTimeMillis();
         LOGGER.info("[ProductController] perform {} of DEMO API","getProduct");
 
@@ -33,7 +33,9 @@ public class ProductController {
         LOGGER.info("[ProductController] Response :: productId = {}, productName ={} , productPrice = {} , productStock = {}",
                 productDTO.getProductId(),productDTO.getProductName(),productDTO.getProductPrice(),productDTO.getProductStock());
 
-        return productDTO;
+        String temp=productDTO.getProductName();
+
+        return temp;
     }
 
     /* Validation 적용 이전
@@ -56,10 +58,6 @@ public class ProductController {
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(response);
     }
 
-    @DeleteMapping(value = "/product/{productId}")
-    public ProductDTO deleteProduct(@PathVariable String productId) {
-        return null;
-    }
 
     @PostMapping(value = "/product/exception")
     public void exceptionTest() throws DemoException {
